@@ -15,10 +15,16 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+    title : {
+        // color:"rgb(0,0,255,0.5)",
+        color: "#3f51b5",
+        textTransform : "capitalize"
+        // textTransform : "uppercase"
+    }
 }));
-function getCase(str){
-    return str.charAt(0).toLocaleUpperCase()+str.slice(1)
-}
+// function getCase(str){
+//     return str.charAt(0).toLocaleUpperCase()+str.slice(1)
+// }
 
 
 export default function InfoPanel() {
@@ -49,13 +55,13 @@ export default function InfoPanel() {
                 return (
                     <Grid item xs={12} sm={4} key={ind}>
                         <Paper className={classes.paper} elevation={3}>
-                           <h3>{getCase(key)}</h3>
+                           <h3 className={classes.title} >{key} </h3>
                            <h3> <CountUp
                            start={globalData[key]-1000}
                            duration={2.5}
                            separator=","
                            end={globalData[key]} /> </h3>
-                           <h3>{globalData[key]}</h3>
+                           
                         </Paper>
                     </Grid>
                 )
