@@ -1,12 +1,13 @@
 
 import './App.css';
-import SearchAppBar from "./Components/Navbar"
+import {NavBar , InfoPanel} from "./Components"
 
 
 function App() {
   return (
     <div>
-        <SearchAppBar/>
+       <NavBar/>
+        <InfoPanel/>
     </div>
   );
 }

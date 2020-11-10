@@ -61,7 +61,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SearchAppBar() {
+export default function NavBar() {
+
   const classes = useStyles();
 
   return (
