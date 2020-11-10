@@ -1,13 +1,12 @@
 
 import './App.css';
+import SearchAppBar from "./Components/Navbar"
+
 
 function App() {
   return (
     <div>
-      <h1>
-
-      Hello
-      </h1>
+        <SearchAppBar/>
     </div>
   );
 }
