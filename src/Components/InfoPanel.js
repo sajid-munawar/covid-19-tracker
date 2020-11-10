@@ -69,19 +69,19 @@ export default function InfoPanel() {
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12} sm={4} >
-                <Paper className={classes.paper} elevation={3} className={classes.total}>
+                <Paper  className={classes.total}>
                     <h3>Total Cases</h3>
                     <h3>{Object.values(globalData)[1]}</h3>
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={4} >
-                <Paper className={classes.paper} elevation={3} className={classes.deaths}> 
+                <Paper  className={classes.deaths}> 
                     <h3>Deaths</h3>
                     <h3>{Object.values(globalData)[3]}</h3>
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={4} >
-                <Paper className={classes.paper} elevation={3} className={classes.recoverd}>
+                <Paper className={classes.recoverd}>
                     <h3>Recovered</h3>
                     <h3>{Object.values(globalData)[5]}</h3>
                     </Paper>
