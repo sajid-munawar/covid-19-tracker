@@ -12,15 +12,17 @@ function Country() {
         }
         getData();
     }, [])
-    // console.log(globalData[1].country)
+   
     return (<div>    
-        {/* {Object.keys(globalData)}   */}
+  
 
         {Object.keys(globalData).map((key,ind)=>{
             return (
                 <div><ul>
                     <li><h3>{key}</h3> </li>
-                     <h3>{globalData[key].country}</h3>
+                    <li></li> <h3>{globalData[key].country}</h3>
+                     <h3>Cases       {globalData[key].cases}</h3>
+                     <h3>{globalData[ind].cases}</h3>
             
             
             </ul>
