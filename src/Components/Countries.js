@@ -12,15 +12,40 @@ function Country() {
         }
         getData();
     }, [])
-    return <div>
-        <h1>Hello</h1>
+    console.log(globalData)
+    return (<div>    
+    {(() => {
+        if (globalData) {
 
+            globalData.map (data => {
+                console.log(data);
+                return (
+                    <div>
+                        <h4>{data.country}</h4>
+                    </div>
+                )
+            })
+        }
+    })()}
 
-
-
-        {/* <ul>Quote: { globalData.map((item, index) => (<li key={index}>,</li>)) }</ul> */}
-
-        {/* {globalData[0]} */}
-    </div>
+</div>)
 }
 export default Country;
+
+
+
+
+
+
+
+// return (<div>
+        
+//     {globalData.map(data=>{
+//         return (<div>data.country</div> )
+//     })}       
+
+// </div>)
+{/* {globalData[0]} */}
+{/* <ul>Quote: { globalData.map((item, index) => (<li key={index}>,</li>)) }</ul> */}
+
+
