@@ -50,7 +50,7 @@ export default function InfoPanel() {
         let data = await response.json();
         setGlobalData(data)
         setData(false);
-        console.log(data);
+        // console.log(data);
        
       }
       getData();
