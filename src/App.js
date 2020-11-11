@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
        <NavBar/>
-       <img src={covid} alt="covid-19" align={"center"} width={400} />
+       <img src={covid} alt="covid-19" className="img" />
         <InfoPanel/>
     </div>
   );
