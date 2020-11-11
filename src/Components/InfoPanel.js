@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-// import CountUp from 'react-countup';
+import CountUp from 'react-countup';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -71,19 +71,36 @@ export default function InfoPanel() {
                 <Grid item xs={12} sm={4} >
                 <Paper  className={classes.total}>
                     <h3>Total Cases</h3>
-                    <h3>{Object.values(globalData)[1]}</h3>
+                    <h3><CountUp
+                           start={Object.values(globalData)[1]-1000}
+                           duration={2.5}
+                           separator=","
+                           end={Object.values(globalData)[1]} /></h3>
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={4} >
                 <Paper  className={classes.deaths}> 
                     <h3>Deaths</h3>
-                    <h3>{Object.values(globalData)[3]}</h3>
+                    <h3><CountUp
+                           start={Object.values(globalData)[3]-1000}
+                           duration={2.5}
+                           separator=","
+                           end={Object.values(globalData)[3]} /></h3>
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={4} >
                 <Paper className={classes.recoverd}>
                     <h3>Recovered</h3>
-                    <h3>{Object.values(globalData)[5]}</h3>
+                    <h3>
+                        
+                    <CountUp
+                           start={Object.values(globalData)[5]-1000}
+                           duration={2.5}
+                           separator=","
+                           end={Object.values(globalData)[5]} />
+                    </h3>
+
+                    {/* {Object.values(globalData)[5]} */}
                     </Paper>
                 </Grid>
 
