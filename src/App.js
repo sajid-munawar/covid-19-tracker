@@ -1,6 +1,6 @@
 
 import './App.css';
-import {NavBar , InfoPanel, Country,CountryTable} from "./Components"
+import {NavBar , InfoPanel,CountryTable} from "./Components"
 import covid from "./covid.jpg";
 
 
